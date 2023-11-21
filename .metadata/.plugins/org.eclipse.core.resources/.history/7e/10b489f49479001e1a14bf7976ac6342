@@ -1,0 +1,17 @@
+package ejemplosBucles;
+
+public class Ejemplo09 {
+
+	public static void main(String[] args) {
+		//El método Math.random() devuelve un número mayor o igual a 0
+		//y menor que 1.
+		int num =0;
+		
+		while(num<10) {
+		System.out.println(Math.random());
+		
+		num++;
+		}
+	}
+
+}

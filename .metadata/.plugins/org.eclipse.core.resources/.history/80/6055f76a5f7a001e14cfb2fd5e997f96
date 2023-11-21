@@ -1,0 +1,31 @@
+package hoja2Bucles;
+
+import java.util.Scanner;
+
+public class Ejer16 {
+
+	public static void main(String[] args) {
+		// Diseña un programa que invente un número aleatorio.
+		// A continuación pedirá al usuario que lo adivine.
+		// Si el usuario falla, entonces el programa le dará otra oportunidad.
+		// Una vez que el usuario adivina el número o falla tres veces, el programa
+		// termina.
+		Scanner entrada = new Scanner(System.in);
+		int numero = 0;
+		int aleatorio = (int) (10 * Math.random() + 1);
+		int contador = 0;
+
+		do {
+			System.out.println("Escribe un número del 1 al 10, tienes 3 oportunidades:");
+			numero = entrada.nextInt();
+			
+			contador++;
+		} while (numero != aleatorio && numero < 3);
+		System.out.println("Correcto!!");
+		if(numero == aleatorio) {
+			System.out.println("Correcto");
+		}
+
+	}
+
+}

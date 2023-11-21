@@ -1,0 +1,21 @@
+package ejemplosBucles;
+
+import java.util.Scanner;
+
+public class Ejemplo10 {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Dime una palabra y la escribiré 10 veces:");
+		String palabra = entrada.nextLine();
+		
+		//Bucle while
+		int num = 1;
+		while(num <=10) {
+			System.out.println(num + " " + palabra);
+		}
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package hoja2Bucles;
+
+import java.util.Scanner;
+
+public class Ejer13 {
+
+	public static void main(String[] args) {
+		// Escribe un programa que pregunte un número entre 1 y 20. Si el número
+		// introducido no cumple
+		// la condición, se le volverá a preguntar hasta que la cumpla. Al final
+		// simplemente se
+		// mostrará el número en pantalla.
+		Scanner entrada = new Scanner(System.in);
+		int num = 0;
+		do {
+			System.out.println("Escribe un número entre 1 y 20: ");
+			num = entrada.nextInt();
+		} while (num > 0 && num <= 20);
+		System.out.println("Has escrito el número: " + num);
+
+	}
+
+}

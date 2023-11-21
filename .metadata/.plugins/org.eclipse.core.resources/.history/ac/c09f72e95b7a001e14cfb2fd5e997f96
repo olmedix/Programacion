@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Ejer23 {
+
+	public static void main(String[] args) {
+		// Escribe una aplicación que solicite cinco notas.
+		// Si el usuario escribe una nota que no está entre
+		// 0 y 10 se le informará del error y se le volverá a pedir el dato.
+		Scanner entrada = new Scanner(System.in);
+		double nota = entrada.nextDouble();
+		int contador=1;
+		
+			System.out.println("Escribe una nota entre 0 y 10: ");
+			nota = entrada.nextDouble();
+			
+			while(nota > 0 || nota <= 10) {
+				do {
+					System.out.println(contador + " nota: " + nota );
+					contador++;
+				}while(contador<=5);
+				
+			}
+		
+
+	}
+}

@@ -1,0 +1,22 @@
+package hoja2Bucles;
+
+public class Ejer15 {
+
+	public static void main(String[] args) {
+		// Crea una aplicación que calcule una lista con las potencias de 3 menores que 12000. 
+		//Haz que en cada pasada del bucle se muestre el exponente y el valor de la potencia. 
+		//Utiliza un bucle do-while
+		
+		int base=3;
+		int exponente=1;
+		int resultado=3;
+		
+		do {
+			System.out.println(base + "^"+ exponente + ": " + resultado );
+			resultado = (int) Math.pow(base, exponente);
+			
+			base++;
+		}while(resultado<12000);
+	}
+
+}

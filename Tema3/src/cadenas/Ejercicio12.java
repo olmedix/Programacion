@@ -7,7 +7,7 @@ public class Ejercicio12 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Introduce una frase: ");
+        System.out.println("Introduce una frase: ");
         String frase = entrada.nextLine();
 
         String[] palabras = frase.split(" ");

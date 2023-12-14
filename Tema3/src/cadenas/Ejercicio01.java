@@ -15,7 +15,7 @@ public class Ejercicio01 {
 		
 		System.out.println("La palabra tiene " + longitud + " letras.");
 		
-
+entrada.close();
 	}
 
 }

@@ -13,7 +13,7 @@ public class Ejemplo08 {
 
 		System.out.println("Apellidos: " + datosSeparados[0]);
 		System.out.println("Nombre: " + datosSeparados[1]);
-		System.out.println("Edad: " + datosSeparados[2]);
+		System.out.println("Edad: " + datosSeparados[2]) ;
 		System.out.println("Email: " + datosSeparados[3]);
 		System.out.println("Teléfono: " + datosSeparados[4]);
 

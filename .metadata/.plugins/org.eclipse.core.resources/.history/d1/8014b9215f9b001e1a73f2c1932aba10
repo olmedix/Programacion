@@ -1,0 +1,18 @@
+package cadenas;
+
+import java.util.Scanner;
+
+public class Ejercicio12A {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+
+		System.out.println("Introduce una frase: ");
+		String frase = entrada.nextLine();
+		frase.trim();
+		int posEspacio = 0;
+		int posEspacioSiguiente = 0;
+
+	}
+
+}

@@ -8,8 +8,13 @@ ct.upsell.display.after=1700072552519
 eclipse.preferences.version=1
 iconcolormode=primary
 iconreplacement=false
+<<<<<<< HEAD
 last.download.attempt.time=1702680635681
 lastConfiguration=1702680619559
+=======
+last.download.attempt.time=1702677700719
+lastConfiguration=1702675499172
+>>>>>>> 71aa144 (ejercicios 17 y 18)
 newinstall=false
 showWelcomeDialog=false
 workbench.theme=Dark Gray

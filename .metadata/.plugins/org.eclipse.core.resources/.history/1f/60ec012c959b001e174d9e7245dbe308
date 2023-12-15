@@ -1,0 +1,24 @@
+package cadenas;
+
+public class Ejercicio18 {
+
+	public static void main(String[] args) {
+		// Coger una cadena y poner la primera letra de cada palabra en mayúsculas.
+
+		String frase = "A quien madruga Dios le ayuda.";
+
+		String[] palabras = frase.split(" ");
+		int posFinal = frase.indexOf(" ");
+
+		while (posFinal != -1) {
+
+			if (posFinal == 0) {
+				frase.toUpperCase().charAt(posFinal + 1);
+			}
+			System.out.println(frase);
+		}
+		System.out.println(frase);
+
+	}
+
+}

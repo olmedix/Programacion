@@ -1,3 +1,6 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=5f7cc02 (ejercicios 17 y 18)
 applyBackground=false
 approved.defs.file.last.changed.time=1693315978000
 configurationInstallLocation=/home/horabaixa/eclipse/java-2023-09/eclipse/
@@ -5,8 +8,8 @@ ct.upsell.display.after=1700072552519
 eclipse.preferences.version=1
 iconcolormode=primary
 iconreplacement=false
-last.download.attempt.time=1702653157480
-lastConfiguration=1702653146837
+last.download.attempt.time=1702680635681
+lastConfiguration=1702680619559
 newinstall=false
 showWelcomeDialog=false
 workbench.theme=Dark Gray

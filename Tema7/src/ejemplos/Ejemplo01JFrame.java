@@ -22,5 +22,10 @@ public class Ejemplo01JFrame extends JFrame {
 		setVisible(true);
 
 	}
+	
+	public static void main(String[] args) {
+
+		Ejemplo01JFrame ejemplo = new Ejemplo01JFrame();
+	}
 
 }

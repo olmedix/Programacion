@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
-    <fullyQualifiedTypeName name="ejemplo08Visilidad.Persona"/>
-    <fullyQualifiedTypeName name="ejemplo09Persona.Persona"/>
-    <fullyQualifiedTypeName name="geometria.Cilindro"/>
-    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
-    <fullyQualifiedTypeName name="java.io.Reader"/>
-    <fullyQualifiedTypeName name="ejemplo12Static.Unidades"/>
-    <fullyQualifiedTypeName name="conversion.Conversor"/>
-    <fullyQualifiedTypeName name="cuentaBancaria.CuentaBancaria"/>
-    <fullyQualifiedTypeName name="java.lang.ThreadDeath"/>
-    <fullyQualifiedTypeName name="instituto.Instituto"/>
-    <fullyQualifiedTypeName name="biblioteca.Autor"/>
     <fullyQualifiedTypeName name="biblioteca.Libro"/>
     <fullyQualifiedTypeName name="electrodomesticos.Motor"/>
     <fullyQualifiedTypeName name="electrodomesticos.Taller"/>
@@ -47,17 +35,29 @@
     <fullyQualifiedTypeName name="ejercicio02.Condensador"/>
     <fullyQualifiedTypeName name="ejercicio02.Diodo"/>
     <fullyQualifiedTypeName name="ejercicio02.Led"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo01JFrame"/>
     <fullyQualifiedTypeName name="java.security.DomainCombiner"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo02Button"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo03JTextField"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
-    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
     <fullyQualifiedTypeName name="javax.swing.JTextField"/>
+    <fullyQualifiedTypeName name="Paquete"/>
+    <fullyQualifiedTypeName name="Direccion"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
+    <fullyQualifiedTypeName name="javax.swing.JRadioButton"/>
+    <fullyQualifiedTypeName name="javax.swing.ButtonGroup"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="ejemplos.Ejemplo04JComboBox"/>
+    <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
     <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextArea"/>
+    <fullyQualifiedTypeName name="java.awt.Dimension"/>
+    <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
     <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
+    <fullyQualifiedTypeName name="javax.swing.UIManager"/>
 </qualifiedTypeNameHistroy>

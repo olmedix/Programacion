@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="electrodomesticos.Motor"/>
-    <fullyQualifiedTypeName name="electrodomesticos.Taller"/>
-    <fullyQualifiedTypeName name="ejemplo01Persona.Persona"/>
-    <fullyQualifiedTypeName name="ejemplo01Persona.Cliente"/>
-    <fullyQualifiedTypeName name="ejemplo01Persona.Empleado"/>
     <fullyQualifiedTypeName name="ejemplo01Persona.Directivo"/>
     <fullyQualifiedTypeName name="ejemplo02Vehiculo.Coche"/>
     <fullyQualifiedTypeName name="ejemplo02Vehiculo.Vehiculo"/>
@@ -48,16 +43,21 @@
     <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
     <fullyQualifiedTypeName name="javax.swing.JRadioButton"/>
     <fullyQualifiedTypeName name="javax.swing.ButtonGroup"/>
-    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo04JComboBox"/>
     <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
-    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
-    <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
     <fullyQualifiedTypeName name="javax.swing.JTextArea"/>
-    <fullyQualifiedTypeName name="java.awt.Dimension"/>
     <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
     <fullyQualifiedTypeName name="javax.swing.JButton"/>
     <fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
     <fullyQualifiedTypeName name="javax.swing.UIManager"/>
+    <fullyQualifiedTypeName name="ejemplos.Ejemplo07Slider"/>
+    <fullyQualifiedTypeName name="ejercicios.Ejercicio1"/>
+    <fullyQualifiedTypeName name="ejercicios.Ejercicio4"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="ejercicios.Ejercicio5"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="javax.swing.JSlider"/>
+    <fullyQualifiedTypeName name="java.awt.Dimension"/>
 </qualifiedTypeNameHistroy>

@@ -13,12 +13,13 @@ public class Ejercicio5 extends JFrame {
 
 		super("Termostato");
 		setSize(300, 350);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new FlowLayout());
 
 		JLabel lblTemperatura = new JLabel("Temperatura(ºC)");
 		JSlider sldTemperatura = new JSlider(JSlider.VERTICAL, 0, 25, 17);
+		
 		sldTemperatura.setPreferredSize(new Dimension(100, 300));
-
 		sldTemperatura.setMinorTickSpacing(1);
 		sldTemperatura.setMajorTickSpacing(5);
 		sldTemperatura.setPaintTicks(true);

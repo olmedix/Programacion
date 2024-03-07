@@ -22,7 +22,7 @@ public class Ejercicio5 extends JFrame {
 		sldTemperatura.setMinorTickSpacing(1);
 		sldTemperatura.setMajorTickSpacing(5);
 		sldTemperatura.setPaintTicks(true);
-		sldTemperatura.setPaintTrack(true);
+		sldTemperatura.setPaintLabels(true);
 
 		add(sldTemperatura);
 		add(lblTemperatura);

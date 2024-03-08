@@ -1,6 +1,5 @@
 package ejercicios;
 
-
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 
@@ -20,7 +19,11 @@ public class Ejercicio6 extends JFrame {
 		setLayout(new FlowLayout());
 
 		JLabel lblComentario = new JLabel("Deja un comentario");
-		JScrollPane scpComentairo = new JScrollPane(new JTextArea());
+
+		JTextArea txtMotivo = new JTextArea();
+		txtMotivo.setLineWrap(true);
+		txtMotivo.setWrapStyleWord(true);
+		JScrollPane scpComentairo = new JScrollPane(txtMotivo);
 		scpComentairo.setPreferredSize(new Dimension(300, 300));
 
 		JButton btnEnviar = new JButton("Enviar");

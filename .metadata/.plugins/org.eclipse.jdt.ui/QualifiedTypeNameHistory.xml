@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ejemplo01Persona.Directivo"/>
-    <fullyQualifiedTypeName name="ejemplo02Vehiculo.Coche"/>
-    <fullyQualifiedTypeName name="ejemplo02Vehiculo.Vehiculo"/>
-    <fullyQualifiedTypeName name="ejemplo02Vehiculo.Moto"/>
-    <fullyQualifiedTypeName name="ejercicio01.Musica"/>
-    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
-    <fullyQualifiedTypeName name="ejercicio01.Medio"/>
-    <fullyQualifiedTypeName name="ejercicio01.Mp3"/>
-    <fullyQualifiedTypeName name="ejercicio01.Ogg"/>
-    <fullyQualifiedTypeName name="ejemplo03PolimorfismoPersona.Persona"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="ejercicio01.Guardable"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
@@ -35,19 +25,13 @@
     <fullyQualifiedTypeName name="ejemplos.Ejemplo02Button"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo03JTextField"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
     <fullyQualifiedTypeName name="Paquete"/>
     <fullyQualifiedTypeName name="Direccion"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
     <fullyQualifiedTypeName name="javax.swing.JRadioButton"/>
     <fullyQualifiedTypeName name="javax.swing.ButtonGroup"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo04JComboBox"/>
-    <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
-    <fullyQualifiedTypeName name="javax.swing.JTextArea"/>
-    <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
-    <fullyQualifiedTypeName name="javax.swing.JButton"/>
     <fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
     <fullyQualifiedTypeName name="javax.swing.UIManager"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo07Slider"/>
@@ -55,9 +39,25 @@
     <fullyQualifiedTypeName name="ejercicios.Ejercicio4"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="ejercicios.Ejercicio5"/>
+    <fullyQualifiedTypeName name="javax.swing.JSlider"/>
+    <fullyQualifiedTypeName name="ejemplos.Ejemplo08ImagenIcon"/>
+    <fullyQualifiedTypeName name="ejemplos.Ejemplo09JToolBar"/>
+    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="ejercicios.Ejercicio6"/>
+    <fullyQualifiedTypeName name="ejercicios.Ejercicio7"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextArea"/>
+    <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+    <fullyQualifiedTypeName name="java.awt.Dimension"/>
+    <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
+    <fullyQualifiedTypeName name="ejemplos.Ejemplo9B"/>
     <fullyQualifiedTypeName name="javax.swing.JFrame"/>
     <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
-    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
-    <fullyQualifiedTypeName name="javax.swing.JSlider"/>
-    <fullyQualifiedTypeName name="java.awt.Dimension"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+    <fullyQualifiedTypeName name="javax.swing.JToolBar"/>
+    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
 </qualifiedTypeNameHistroy>

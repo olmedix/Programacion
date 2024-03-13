@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplos2;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridLayout;

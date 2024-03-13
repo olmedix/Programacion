@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplos1;
 
 import javax.swing.JFrame;
 import javax.swing.UIManager;

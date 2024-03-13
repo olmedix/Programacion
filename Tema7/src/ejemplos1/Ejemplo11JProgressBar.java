@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplos1;
 
 import java.awt.Color;
 import java.awt.Dimension;

@@ -1,6 +1,7 @@
 package hoja03;
 
 import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -14,7 +15,7 @@ public class Ejercicio4 extends JFrame {
 		super("Asistente matemático");
 		setSize(300, 200);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setLayout(new BorderLayout());
+		setLayout(new FlowLayout());
 
 		// Creación de menú Aritmética y sus items.
 		JMenu menuAritmética = new JMenu("Aritmética");
@@ -52,7 +53,7 @@ public class Ejercicio4 extends JFrame {
 		menu.add(menuAritmética);
 		menu.add(menuCalculo);
 
-		add(menu, BorderLayout.NORTH);
+		setJMenuBar(menu);
 
 		setVisible(true);
 	}

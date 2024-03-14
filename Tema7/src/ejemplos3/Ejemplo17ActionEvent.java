@@ -14,6 +14,8 @@ public class Ejemplo17ActionEvent extends JFrame implements ActionListener {
 	private JButton btnAzul;
 	private JButton btnRojo;
 	private JLabel lblMensaje;
+	private JLabel lblPulsaciones;
+	private int pulsaciones = 0;
 
 	public Ejemplo17ActionEvent() {
 
@@ -32,10 +34,12 @@ public class Ejemplo17ActionEvent extends JFrame implements ActionListener {
 		btnRojo.addActionListener(this);
 
 		lblMensaje = new JLabel("Pulsa uno de los botones.");
+		lblPulsaciones = new JLabel("");
 
 		add(btnAzul);
 		add(btnRojo);
 		add(lblMensaje);
+		add(lblPulsaciones);
 
 		setVisible(true);
 
@@ -46,13 +50,16 @@ public class Ejemplo17ActionEvent extends JFrame implements ActionListener {
 
 		// Averiguamos qué botón ha lanzado el evento ( se ha pulsado )
 		JButton btnPulsado = (JButton) arg0.getSource();
-		
-		if(btnPulsado == btnAzul) {
+
+		if (btnPulsado == btnAzul) {
 			lblMensaje.setText("Has pulsado el botón azul");
-		}else {
+		} else {
 			lblMensaje.setText("Has pulsado el botón rojo");
 		}
-		
+
+		pulsaciones++;
+		lblPulsaciones.setText("Has pulsado los botón " + pulsaciones + " veces.");
+
 	}
 
 	public static void main(String[] args) {

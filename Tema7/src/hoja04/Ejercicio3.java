@@ -15,7 +15,6 @@ public class Ejercicio3 extends JFrame implements ItemListener {
 	private JCheckBox checkHotel;
 	private JCheckBox checkPensionCompleta;
 	private JLabel lblPrecioTotal;
-	private int Preciototal = 0;
 
 	public Ejercicio3() {
 
@@ -53,14 +52,18 @@ public class Ejercicio3 extends JFrame implements ItemListener {
 
 	@Override
 	public void itemStateChanged(ItemEvent e) {
+		int Preciototal = 0;
 
 		if (checkAvion.isSelected()) {
 			Preciototal += 120;
-		} else if (checkAeropuerto.isSelected()) {
+		}
+		if (checkAeropuerto.isSelected()) {
 			Preciototal += 40;
-		} else if (checkHotel.isSelected()) {
+		}
+		if (checkHotel.isSelected()) {
 			Preciototal += 180;
-		} else if (checkPensionCompleta.isSelected()) {
+		}
+		if (checkPensionCompleta.isSelected()) {
 			Preciototal += 70;
 		}
 

@@ -1,6 +1,8 @@
 package hoja04;
 
+import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.ItemSelectable;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
@@ -10,6 +12,9 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class Ejercicio2 extends JFrame implements ItemListener {
+	
+	private JLabel lblOpcionCurso ;
+	private JComboBox<String> comboCurso;
 
 	public Ejercicio2() {
 
@@ -26,10 +31,13 @@ public class Ejercicio2 extends JFrame implements ItemListener {
 		JTextField txtNombre = new JTextField(20);
 
 		JLabel lblCurso = new JLabel("Curso");
-		JComboBox<String> comboCurso = new JComboBox<>();
+		comboCurso = new JComboBox<>();
+		comboCurso.setPreferredSize(new Dimension(150,25));
+		comboCurso.addItemListener(this);
 		
 		// Label que 
-		JLabel lblOpcionCurso = new JLabel("");
+		lblOpcionCurso = new JLabel("");
+		
 
 		comboCurso.addItem("1º ESO");
 		comboCurso.addItem("2º ESO");
@@ -50,8 +58,11 @@ public class Ejercicio2 extends JFrame implements ItemListener {
 	
 	@Override
 	public void itemStateChanged(ItemEvent arg0) {
-		// TODO Auto-generated method stub
 		
+			String opcion = (String) comboCurso.getSelectedItem();
+			
+			lblOpcionCurso.setText("Curso: " + opcion);
+	
 	}
 
 

@@ -1,8 +1,6 @@
 package hoja04;
 
-import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.ItemSelectable;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
@@ -12,65 +10,61 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class Ejercicio2 extends JFrame implements ItemListener {
-	
-	private JLabel lblOpcionCurso ;
+
 	private JComboBox<String> comboCurso;
+	private JLabel lblSeleccion;
 
 	public Ejercicio2() {
 
-		super("Matrícula");
-		setSize(250, 250);
+		super("Apellidos");
+		setSize(250, 200);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setLayout(new FlowLayout(FlowLayout.LEFT));
 		setLocationRelativeTo(null);
+		setLayout(new FlowLayout(FlowLayout.LEFT));
 
 		JLabel lblApellidos = new JLabel("Apellidos");
-		JTextField txtApellidos = new JTextField(20);
-
 		JLabel lblNombre = new JLabel("Nombre");
-		JTextField txtNombre = new JTextField(20);
-
 		JLabel lblCurso = new JLabel("Curso");
-		comboCurso = new JComboBox<>();
-		comboCurso.setPreferredSize(new Dimension(150,25));
-		comboCurso.addItemListener(this);
-		
-		// Label que 
-		lblOpcionCurso = new JLabel("");
-		
+		lblSeleccion = new JLabel("");
+		JTextField textApellidos = new JTextField(20);
+		JTextField textNombre = new JTextField(20);
 
-		comboCurso.addItem("1º ESO");
-		comboCurso.addItem("2º ESO");
-		comboCurso.addItem("3º ESO");
-		comboCurso.addItem("4º ESO");
+		comboCurso = new JComboBox<String>();
+		comboCurso.addItemListener(this);
+
+		comboCurso.addItem("Selecciona un curso");
+		comboCurso.addItem("1ºESO");
+		comboCurso.addItem("2ºESO");
+		comboCurso.addItem("3ºESO");
+		comboCurso.addItem("4ºESO");
 
 		add(lblApellidos);
-		add(txtApellidos);
+		add(textApellidos);
 		add(lblNombre);
-		add(txtNombre);
+		add(textNombre);
 		add(lblCurso);
 		add(comboCurso);
-		add(lblOpcionCurso);
+		add(lblSeleccion);
 
 		setVisible(true);
 
 	}
-	
+
 	@Override
 	public void itemStateChanged(ItemEvent arg0) {
-		
-			String opcion = (String) comboCurso.getSelectedItem();
-			
-			lblOpcionCurso.setText("Curso: " + opcion);
-	
+
+		String seleccion = (String) comboCurso.getSelectedItem();
+
+		if (seleccion.equals("Selecciona un curso")) {
+			lblSeleccion.setText("");
+		} else {
+			lblSeleccion.setText("Curso: " + seleccion);
+		}
 	}
 
-
 	public static void main(String[] args) {
-
 		new Ejercicio2();
 
 	}
 
-	
 }

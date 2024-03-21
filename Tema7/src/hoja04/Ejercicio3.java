@@ -25,7 +25,7 @@ public class Ejercicio3 extends JFrame implements ItemListener {
 
 		JLabel lblOpciones = new JLabel("Opciones:");
 
-		checkAvion = new JCheckBox("Billetes de avión");
+		checkAvion = new JCheckBox("Billetes de avión",true);
 		checkAvion.addItemListener(this);
 
 		checkAeropuerto = new JCheckBox("Transporte aeropuerto");

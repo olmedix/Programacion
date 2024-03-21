@@ -1,6 +1,5 @@
 package ejemplos3;
 
-import java.awt.FlowLayout;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -40,7 +39,7 @@ public class Ejemplo21KeyListener extends JFrame {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				int codigoTecla = e.getKeyCode();
-				int velocidad = 3;
+				int velocidad = 5;
 
 				if (codigoTecla == KeyEvent.VK_UP) {
 
@@ -58,12 +57,16 @@ public class Ejemplo21KeyListener extends JFrame {
 
 					if (x > 0) {
 						x = x - velocidad;
+					}else {
+						x=400;
 					}
 
 				} else if (codigoTecla == KeyEvent.VK_RIGHT) {
 
-					if (x < 375) {
+					if (x < 400) {
 						x = x + velocidad;
+					}else {
+						x= -23;
 					}
 
 				}

@@ -32,7 +32,7 @@ public class Ejercicio4 extends JFrame implements ChangeListener {
 		JLabel lblVerde = new JLabel("Verde");
 		JLabel lblAzul = new JLabel("Azul");
 
-		sldRojo = new JSlider(0, 250);
+		sldRojo = new JSlider(0, 255);
 		sldRojo.setValue(250);
 		sldRojo.setMajorTickSpacing(50);
 		sldRojo.setMinorTickSpacing(25);
@@ -40,7 +40,7 @@ public class Ejercicio4 extends JFrame implements ChangeListener {
 		sldRojo.setPaintTicks(true);
 		sldRojo.addChangeListener(this);
 
-		sldVerde = new JSlider(0, 250);
+		sldVerde = new JSlider(0, 255);
 		sldVerde.setValue(200);
 		sldVerde.setMajorTickSpacing(50);
 		sldVerde.setMinorTickSpacing(25);
@@ -48,7 +48,7 @@ public class Ejercicio4 extends JFrame implements ChangeListener {
 		sldVerde.setPaintTicks(true);
 		sldVerde.addChangeListener(this);
 
-		sldAzul = new JSlider(0, 250);
+		sldAzul = new JSlider(0, 255);
 		sldAzul.setValue(50);
 		sldAzul.setMajorTickSpacing(50);
 		sldAzul.setMinorTickSpacing(25);

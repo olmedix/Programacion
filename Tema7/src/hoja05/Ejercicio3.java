@@ -96,6 +96,7 @@ public class Ejercicio3 extends JFrame implements ActionListener {
 
 			try {
 				resultado = Double.parseDouble(operandoA) / Double.parseDouble(operandoB);
+				System.out.println("1");
 				textResultado.setText("" + resultado);
 			} catch (NumberFormatException e) {
 				textResultado.setText("ERROR");

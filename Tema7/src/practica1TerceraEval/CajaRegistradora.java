@@ -9,9 +9,13 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 public class CajaRegistradora extends JFrame {
 
@@ -33,6 +37,17 @@ public class CajaRegistradora extends JFrame {
 
 		// Creamos cuenta con 3 articulos.
 		cuenta = new Cuenta(3);
+		
+		// Asignamos un Look and feel a nuestra ventana.
+//		try {
+//			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+//			
+//			SwingUtilities.updateComponentTreeUI(this);
+//		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+//				| UnsupportedLookAndFeelException e) {
+//			
+//			JOptionPane.showMessageDialog(null, "Se ha producido un error al aplicar el Look and Feel a la ventana.","Caja registradora",JOptionPane.ERROR_MESSAGE);
+//		}
 
 		// Panel principal de la izquierda donde irán los panales de la izquierda.
 		JPanel panelIzquierda = new JPanel();
@@ -45,10 +60,12 @@ public class CajaRegistradora extends JFrame {
 
 		JLabel lblProducto = new JLabel(" Producto");
 		lblProducto.setPreferredSize(new Dimension(250, 20));
-		String articulos[] = new String[] { "Café con leche", "Café cortado", "Café solo",
-				"Napolitana de Jamón York" + " y queso", "Napolitana de chocolate", "Croissant", "Té verde",
-				"Desayuno especial del lunes" };
-		cmbArticulos = new JComboBox<String>(articulos);
+
+		// Inicializamos y damos valores al combobox.
+		cmbArticulos = new JComboBox<String>();
+		for (int i = 0; i < stock.length; i++) {
+			cmbArticulos.addItem(stock[i][0]);
+		}
 		cmbArticulos.setPreferredSize(new Dimension(237, 20));
 
 		panelProducto.add(lblProducto);
@@ -85,14 +102,19 @@ public class CajaRegistradora extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("si");
-//				txtCuenta.setText(calcularCuenta());
-
+				calcularCuenta();
 			}
 		});
 
 		JButton btnNuevaCuenta = new JButton("Nueva Cuenta");
 		btnNuevaCuenta.setPreferredSize(new Dimension(115, 20));
+		btnNuevaCuenta.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {	
+				nuevaCuenta();
+			}
+		});
 
 		panelBotones.add(btnAnyadir);
 		panelBotones.add(btnCalcular);
@@ -123,21 +145,56 @@ public class CajaRegistradora extends JFrame {
 		setVisible(true);
 	}
 
+	// Añade un producto si hay espacio en la cuenta, luego deja txtUnidades en
+	// valor 1.
 	public void anyadirProducto() {
-		// PENDIENTE DE HACER
+		String precio = "";
+		String articulo = (String) cmbArticulos.getSelectedItem();
+		
+		// Si la descripción del artículo tiene mas de 25 caracteres cortaremos la descripción en 25 caracteres.
+		if(articulo.length() > 25) {
+			articulo = articulo.substring(0,25);
+		}
+		
+		// Asignamos a la variable precio el valor de la columna 1 de nuestra array stock.
+		for (int i = 0; i < stock.length; i++) {
+			if (cmbArticulos.getSelectedIndex() == i) {
+				precio = stock[i][1];
+			}
+		}
+
+		cuenta.addArticulo(articulo, precio, txtUnidades.getText());
+		
+		txtCuenta.setText(cuenta.ENCABEZADO_CUENTA + cuenta.listadoArticulos());
+		txtUnidades.setText("1");
 	}
 
+	
+	
+	// Al calcular la cuenta cogemos el total del listado de articulos y hacemos las 
+	// operaciones del IVA y el total a pagar.
 	public void calcularCuenta() {
-		cuenta.totales();
+		txtCuenta.setText(cuenta.ENCABEZADO_CUENTA + cuenta.listadoArticulos()
+		+ cuenta.totales());
+		
 	}
 
+	// Iniciamos una nueva cuenta, preguntando al usuario con un JOptionPane si está seguro.
+	// Si cancela la nueva cuenta, no ocurrirá nada.
 	public void nuevaCuenta() {
-		// PENDIENTE DE HACER
+		
+		if(JOptionPane.showConfirmDialog(null, 
+				"¿Está seguro de que quiere descartar la cuenta actual?", 
+				"Caja registradora",JOptionPane.YES_OPTION) == 0) {
+			cuenta.resetear();
+			txtCuenta.setText(cuenta.ENCABEZADO_CUENTA + cuenta.listadoArticulos());
+		}
+		
 	}
 
 	public static void main(String[] args) {
+		
 		new CajaRegistradora();
-
 	}
 
 }

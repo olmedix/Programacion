@@ -7,6 +7,10 @@ import java.awt.event.ItemListener;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 public class Ejemplo19ItemListener extends JFrame implements ItemListener {
 
@@ -20,7 +24,15 @@ public class Ejemplo19ItemListener extends JFrame implements ItemListener {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setLayout(new FlowLayout());
-
+		
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+			
+			SwingUtilities.updateComponentTreeUI(this);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+				| UnsupportedLookAndFeelException e) {
+			JOptionPane.showMessageDialog(null, "NO se ha podido aplicar look and feeel", "error", JOptionPane.ERROR_MESSAGE);
+		}
 		JLabel lblAsignaturas = new JLabel("Elige tu asignatura favorita:");
 		comboAsignatura = new JComboBox<String>();
 		comboAsignatura.addItem("Selecciona una");

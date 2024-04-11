@@ -25,7 +25,7 @@
 	<section name="completion_proposal_size">
 		<item key="contextSelector.size.x" value="312"/>
 		<item key="contextSelector.size.y" value="222"/>
-		<item key="size.x" value="455"/>
+		<item key="size.x" value="456"/>
 		<item key="size.y" value="260"/>
 	</section>
 	<section name="quick_assist_proposal_size">
@@ -34,7 +34,7 @@
 		<item key="create_package_info_java" value="false"/>
 	</section>
 	<section name="RefactoringWizard.preview">
-		<item key="width" value="600"/>
+		<item key="width" value="1501"/>
 		<item key="height" value="400"/>
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
@@ -124,5 +124,10 @@
 	</section>
 	<section name="ClasspathContainerSelectionPage">
 		<item key="index" value="3"/>
+	</section>
+	<section name="ExtractMethodWizard">
+		<item key="ThrowRuntimeExceptions" value="false"/>
+		<item key="GenerateJavadoc" value="false"/>
+		<item key="AccessModifier" value="2"/>
 	</section>
 </section>

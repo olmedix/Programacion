@@ -14,6 +14,8 @@ public class Ejemplo07TransformarArchivo {
 
 		final String NOMBRE_ARCHIVO_ORIGINAL = "ficheros/nombres.txt";
 		final String NOMBRE_ARCHIVO_TEMPORAL = "ficheros/nombres.tmp";
+		
+		System.out.println("Copiando el archivo...");
 
 		try {
 			// Abrir el archivo original para lectura.
@@ -49,8 +51,10 @@ public class Ejemplo07TransformarArchivo {
 		}
 
 		// Eliminamos el archivo original.
-		File archivo = new File(NOMBRE_ARCHIVO_ORIGINAL);
-		boolean resultado = archivo.delete();
+		System.out.println("Eliminando archivos temporales...");
+		
+		File archivoOriginal = new File(NOMBRE_ARCHIVO_ORIGINAL);
+		boolean resultado = archivoOriginal.delete();
 
 		if (resultado) {
 			System.out.println("El archivo ha sido borrado correctamente.");
@@ -59,15 +63,17 @@ public class Ejemplo07TransformarArchivo {
 		}
 
 		// Cambiar el nombre al temporal por el nombre del original.
-		File archivo2 = new File(NOMBRE_ARCHIVO_TEMPORAL);
+		File archivoTemportal = new File(NOMBRE_ARCHIVO_TEMPORAL);
 
-		resultado = archivo2.renameTo(archivo);
+		resultado = archivoTemportal.renameTo(archivoOriginal);
 
 		if (resultado) {
 			System.out.println("Nombre del archivo se ha cambiado.");
 		} else {
 			System.out.println("No ha sido posible cambiar el nombre del archivo.");
 		}
+		
+		System.out.println("Ok.");
 
 	}
 

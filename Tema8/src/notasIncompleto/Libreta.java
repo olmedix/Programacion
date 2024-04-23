@@ -1,5 +1,14 @@
 package notasIncompleto;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import javax.swing.JOptionPane;
+
 public class Libreta {
 
 	private final String NOMBRE_ARCHIVO = "ficheros/notas.txt";
@@ -22,8 +31,12 @@ public class Libreta {
 		 * valor de numNotas. En caso de que hayamos llegado al máximo de notas, no
 		 * hacer nada.
 		 */
-		
-		
+		if (numNotas == MAX_NOTAS) {
+			return;
+		}
+
+		notas[numNotas] = nota;
+		numNotas++;
 
 	}
 
@@ -47,11 +60,18 @@ public class Libreta {
 		 * una posición, y actualiza la variable numNotas.
 		 */
 
+		for (int i = posicion; i < numNotas - 1; i--) {
+
+			notas[posicion] = notas[posicion + 1];
+
+		}
+		numNotas--;
+
 	}
 
 	public void leerNotas() {
 
-		/*para mañana()()()()()()()
+		/*
 		 * TODO: Leer todas las filas del archivo, y rellenar el array notas[]. Si no se
 		 * encuentra el archivo, hacer que se muestre el mensaje indicado en el
 		 * enunciado de la práctica. Si se produce otro tipo de excepción, mostrar un
@@ -61,6 +81,43 @@ public class Libreta {
 		 * título y otra para la descripción. Puedes usar el método split() para separar
 		 * los datos de los comentarios del archivo.
 		 */
+
+		try {
+			BufferedReader bufferLectura = new BufferedReader(new FileReader(NOMBRE_ARCHIVO));
+
+			String linea = bufferLectura.readLine();
+			String titulo = "", descripcion = "";
+
+			while (linea != null) {
+
+				String[] lineaResultado = linea.split("=");
+
+				if (linea.indexOf("TITULO=") != -1) {
+					titulo = lineaResultado[1];
+
+				}
+
+				if (linea.indexOf("DESCRIPCION=") != -1) {
+					descripcion = lineaResultado[1];
+
+					// Al comprobar el 2º dato , agregamos la nota .
+					notas[numNotas] = new Nota(titulo, descripcion);
+					numNotas++;
+				}
+
+				linea = bufferLectura.readLine();
+
+			}
+			bufferLectura.close();
+		} catch (FileNotFoundException e) {
+			JOptionPane.showMessageDialog(null,
+					"No se ha podido encontrar un archivo válido de tareas.\n"
+							+ " Se creará uno nuevo automáticamente.",
+					"Archivo de tareas no encontrado", JOptionPane.INFORMATION_MESSAGE);
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(null, "No se ha podido guardar el archivo de tareas.", "Error de E/S",
+					JOptionPane.ERROR_MESSAGE);
+		}
 
 	}
 
@@ -72,6 +129,24 @@ public class Libreta {
 		 * práctica. Si se produce una excepción, se mostrará el error que aparece en el
 		 * enunciado.
 		 */
+
+		try {
+			BufferedWriter bufferEscritura = new BufferedWriter(new FileWriter(NOMBRE_ARCHIVO));
+
+			for (int i = 0; i < numNotas; i++) {
+
+				Nota nota = notas[i];
+
+				bufferEscritura.write("TITULO=" + nota.getTitulo() + "\n");
+				bufferEscritura.write("DESCRIPCION=" + nota.getDescripcion() + "\n");
+
+			}
+
+			bufferEscritura.close();
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(null, "No se ha podido guardar el archivo de tareas.", "Error de E/S",
+					JOptionPane.ERROR_MESSAGE);
+		}
 
 	}
 

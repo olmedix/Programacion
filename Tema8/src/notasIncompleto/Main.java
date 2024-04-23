@@ -223,7 +223,19 @@ public class Main extends JFrame implements ListSelectionListener {
 		 * del JList. Seleccionar la nueva nota en el JList. Borrar la casilla de título
 		 * y pasarle el foco a la casilla de título.
 		 */
-
+		
+		modeloLista.addElement("Nueva nota");
+	
+		txtTitulo.requestFocus();
+		String titulo = txtTitulo.getSelectedText();
+		
+		txtDescripcion.requestFocus();
+		String descripcion = txtDescripcion.getSelectedText();
+		
+		Nota nota = new Nota(titulo, descripcion);
+		
+		libreta.addNota(nota);
+		
 	}
 
 	private void borrarNotaSeleccionada() {

@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 public class Jugador {
 
 	private String nombreJugador, puntuacionJugador;
-	public static final String ARCHIVO = "ficheros/jugadores.txt";
+	public final String ARCHIVO = "ficheros/jugadores.txt";
 	static DefaultListModel<String> jugadoresLista = new DefaultListModel<>();
 	
 	public Jugador() {
@@ -69,6 +69,11 @@ public class Jugador {
 
 			nombreJugador = JOptionPane.showInputDialog(null, "¿Nombre del jugador?");
 			puntuacionJugador = JOptionPane.showInputDialog(null, "¿Puntuación del jugador?");
+			
+			if(nombreJugador == null || nombreJugador.trim().equals("")) {
+				return null;
+			}
+			
 			// Intenta convertir la puntuación a double
 			double num = Double.parseDouble(puntuacionJugador);
 
@@ -97,7 +102,7 @@ public class Jugador {
 				linea= buffer.readLine();
 			}
 			
-		} catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e ) {
 			JOptionPane.showMessageDialog(null, "No se han encontrado datos guardados de jugadores. Se creará un archivo nuevo.", ARCHIVO, 0);
 		} catch (IOException e) {
 			System.out.println("Error E/S:");

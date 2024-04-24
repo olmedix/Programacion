@@ -47,6 +47,11 @@ public class Ejemplo01Javadoc extends JFrame {
 	private JCheckBox checkPensionCompleta;
 	private JLabel lblPrecioTotal;
 
+	/**
+	 * Constructor de la clase.
+	 * <p>
+	 * Inicializa la ventana.
+	 */
 	public Ejemplo01Javadoc() {
 
 		super("Viajes Gorrión");
@@ -105,7 +110,12 @@ public class Ejemplo01Javadoc extends JFrame {
 
 	}
 
-	private void actualizaPrecio() {
+	/**
+	 * Calcula el precio total en función las opciones que ha elegido el viajero.
+	 * 
+	 * @return el precio total del viaje.
+	 */
+	private double actualizaPrecio() {
 
 		int precioTotal = 0;
 
@@ -123,7 +133,20 @@ public class Ejemplo01Javadoc extends JFrame {
 		}
 
 		lblPrecioTotal.setText("Precio total: " + precioTotal + " €");
+		return precioTotal;
 
+	}
+	
+	/**
+	 * Método que hemos inventado para usar los para probar la documentación de Javadoc.
+	 * @param nombreViajero Nombre del viajero
+	 * @param edadViajero Edad del viajero
+	 * 
+	 * @return Cadena elegida por el viajero.
+	 */
+	
+	private String mostrarOpciones(String nombreViajero,int edadViajero) {
+		return null;
 	}
 
 	public static void main(String[] args) {

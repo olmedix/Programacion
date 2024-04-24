@@ -57,9 +57,9 @@ public class Main extends JFrame implements ListSelectionListener {
 		itemNuevaNota.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				if(libreta.comprobacionNotas()) {
+				
 					crearNota();
-				}
+				
 				
 			}
 		});
@@ -232,7 +232,10 @@ public class Main extends JFrame implements ListSelectionListener {
 		txtTitulo.setText("");
 		txtDescripcion.setText("");
 
-		modeloLista.addElement("Nueva nota");
+		if(libreta.getNumNotas() < libreta.getMAX_NOTA()) {
+			modeloLista.addElement("Nueva nota");
+		}
+		
 
 		txtTitulo.requestFocus();
 		String titulo = txtTitulo.getText();
@@ -243,6 +246,7 @@ public class Main extends JFrame implements ListSelectionListener {
 		
 		
 		libreta.addNota(nota);
+			
 		
 		
 	}

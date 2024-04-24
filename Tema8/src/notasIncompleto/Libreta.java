@@ -22,19 +22,24 @@ public class Libreta {
 		numNotas = 0;
 		leerNotas();
 	}
+	
+	// No permite que ejecute el botón añadir si está lleno.
+	public boolean comprobacionNotas() {
+		if (numNotas < MAX_NOTAS) {
+			return true;
+		}
+		return false;
+	}
 
 	public void addNota(Nota nota) {
 
 		/*
-		 * TODO: Añadir después de la última nota del array la nota que se nos pasa como
+		 *  Añadir después de la última nota del array la nota que se nos pasa como
 		 * parámetro. Utilizar el valor de la variable numNotas. Actualizar después el
 		 * valor de numNotas. En caso de que hayamos llegado al máximo de notas, no
 		 * hacer nada.
 		 */
-		if (numNotas == MAX_NOTAS) {
-			return;
-		}
-
+		
 		notas[numNotas] = nota;
 		numNotas++;
 
@@ -55,12 +60,12 @@ public class Libreta {
 	public void delNota(int posicion) {
 
 		/*
-		 * TODO: Eliminar el elemento del array notas[] que ocupa la posición indicada.
+		 *  Eliminar el elemento del array notas[] que ocupa la posición indicada.
 		 * Para ello, mueve hacia arriba todos los elementos que vengan a continuación
 		 * una posición, y actualiza la variable numNotas.
 		 */
 
-		for (int i = posicion; i < numNotas - 1; i--) {
+		for (int i = posicion; i < numNotas - 1; i++) {
 
 			notas[posicion] = notas[posicion + 1];
 
@@ -72,7 +77,7 @@ public class Libreta {
 	public void leerNotas() {
 
 		/*
-		 * TODO: Leer todas las filas del archivo, y rellenar el array notas[]. Si no se
+		 *  Leer todas las filas del archivo, y rellenar el array notas[]. Si no se
 		 * encuentra el archivo, hacer que se muestre el mensaje indicado en el
 		 * enunciado de la práctica. Si se produce otro tipo de excepción, mostrar un
 		 * JOptionPane explicándolo.
@@ -124,7 +129,7 @@ public class Libreta {
 	public void guardarNotas() {
 
 		/*
-		 * TODO: Guardar las notas del array notas[] en el archivo "notas.txt". El
+		 *  Guardar las notas del array notas[] en el archivo "notas.txt". El
 		 * formato en que se guardarán debe ser el que aparece en el enunciado de la
 		 * práctica. Si se produce una excepción, se mostrará el error que aparece en el
 		 * enunciado.

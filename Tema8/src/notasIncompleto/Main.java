@@ -57,7 +57,10 @@ public class Main extends JFrame implements ListSelectionListener {
 		itemNuevaNota.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				crearNota();
+				if(libreta.comprobacionNotas()) {
+					crearNota();
+				}
+				
 			}
 		});
 
@@ -215,6 +218,9 @@ public class Main extends JFrame implements ListSelectionListener {
 		libreta.guardarNotas();
 
 	}
+	
+
+
 
 	private void crearNota() {
 
@@ -223,18 +229,21 @@ public class Main extends JFrame implements ListSelectionListener {
 		 * del JList. Seleccionar la nueva nota en el JList. Borrar la casilla de título
 		 * y pasarle el foco a la casilla de título.
 		 */
-		
+		txtTitulo.setText("");
+		txtDescripcion.setText("");
+
 		modeloLista.addElement("Nueva nota");
-	
+
 		txtTitulo.requestFocus();
-		String titulo = txtTitulo.getSelectedText();
+		String titulo = txtTitulo.getText();
 		
-		txtDescripcion.requestFocus();
-		String descripcion = txtDescripcion.getSelectedText();
-		
+		String descripcion = txtDescripcion.getText();
+
 		Nota nota = new Nota(titulo, descripcion);
 		
+		
 		libreta.addNota(nota);
+		
 		
 	}
 

@@ -1,4 +1,4 @@
-package ejemplos;
+package ejemplosJavadoc;
 
 import java.awt.FlowLayout;
 import java.awt.event.ItemEvent;
@@ -13,8 +13,16 @@ import javax.swing.JLabel;
  * los extras de un viaje.
  * 
  * <p>
- * El usuario podrá elegir uno de estos cuatro paquetes: billetes de avión,
- * transporte aeropuerto, hotel y pensión completa.
+ * El usuario podrá elegir uno de estos cuatro paquetes: 
+ * 
+ * <ul>
+ * <li>billetes de avión
+ * <li>transporte aeropuerto
+ * <li>hotel
+ * <li>pensión completa
+ * </ul>
+ * 
+ * Esta clase utiliza la clase {@link Extras}
  * 
  * @author Juan José Olmedo
  * 
@@ -43,8 +51,11 @@ public class Ejemplo01Javadoc extends JFrame {
 	/**
 	 * Casilla que el usuario puede marcar para seleccionar los billetes de avión.
 	 */
-
 	private JCheckBox checkPensionCompleta;
+	
+	/**
+	 * Casilla que el usuario puede marcar para seleccionar los billetes de avión.
+	 */
 	private JLabel lblPrecioTotal;
 
 	/**
@@ -142,13 +153,16 @@ public class Ejemplo01Javadoc extends JFrame {
 	 * @param nombreViajero Nombre del viajero
 	 * @param edadViajero Edad del viajero
 	 * 
-	 * @return Cadena elegida por el viajero.
+	 * @return Cadena elegida por el viajero o <code> null </code>.
 	 */
-	
 	private String mostrarOpciones(String nombreViajero,int edadViajero) {
 		return null;
 	}
 
+	/**
+	 * Método que se ejecuta al arrancar el programa.
+	 * @param args este es su argumento por defecto.
+	 */
 	public static void main(String[] args) {
 		new Ejemplo01Javadoc();
 

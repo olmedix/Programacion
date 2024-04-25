@@ -142,10 +142,8 @@ public class Libreta {
 
 			for (int i = 0; i < numNotas; i++) {
 
-				Nota nota = notas[i];
-
-				bufferEscritura.write("TITULO=" + nota.getTitulo() + "\n");
-				bufferEscritura.write("DESCRIPCION=" + nota.getDescripcion() + "\n");
+				bufferEscritura.write("TITULO=" + notas[i].getTitulo() + "\n");
+				bufferEscritura.write("DESCRIPCION=" + notas[i].getDescripcion() + "\n");
 
 			}
 

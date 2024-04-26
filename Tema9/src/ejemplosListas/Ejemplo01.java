@@ -60,9 +60,28 @@ public class Ejemplo01 {
 		
 		System.out.println("¿Existe Inglés? " + existe);
 		
+		System.out.println("\nBuscamos el idioma inglés, usando  indexOf:");
+		int pos = idiomas.indexOf("Inglés");
+		System.out.println("Posición de inglés: " + pos);
+		
+		idiomas.add("Francés");
+		
+		System.out.println("Buscamos el idioma francés empezando por el final.");
+		pos =idiomas.lastIndexOf("Francés");
+		
+		System.out.println("Posición del francés : " + pos);
 		
 		
-
+		System.out.println("\n¿Está vacio nuestro ArrayList? " + idiomas.isEmpty());
+		
+		System.out.println("\nHasta ahora tenemos " + idiomas.size() + " idiomas guardados en el ArrayList.");
+		
+		
+		System.out.println("\nBorramos la lista completa.");
+		idiomas.clear();
+		System.out.println("\nHasta ahora tenemos " + idiomas.size() + " idiomas guardados en el ArrayList.");
+		
+		
 	}
 	
 	private static void mostrarLista(List<String> lista) {

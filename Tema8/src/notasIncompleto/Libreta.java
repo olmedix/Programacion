@@ -23,13 +23,6 @@ public class Libreta {
 		leerNotas();
 	}
 	
-	// No permite que ejecute el botón añadir si está lleno.
-	public boolean comprobacionNotas() {
-		if (numNotas < MAX_NOTAS) {
-			return true;
-		}
-		return false;
-	}
 
 	public void addNota(Nota nota) {
 
@@ -39,15 +32,23 @@ public class Libreta {
 		 * valor de numNotas. En caso de que hayamos llegado al máximo de notas, no
 		 * hacer nada.
 		 */
+		if(numNotas < MAX_NOTAS) {
+			notas[numNotas] = nota;
+			numNotas++;
+		}
 		
-		notas[numNotas] = nota;
-		numNotas++;
 
 	}
 
 	public void setNota(int posicion, Nota nota) {
 
 		notas[posicion] = nota;
+
+	}
+	
+	public int getMAX_NOTA() {
+
+		return MAX_NOTAS;
 
 	}
 
@@ -106,8 +107,9 @@ public class Libreta {
 					descripcion = lineaResultado[1];
 
 					// Al comprobar el 2º dato , agregamos la nota .
-					notas[numNotas] = new Nota(titulo, descripcion);
-					numNotas++;
+					Nota nota = new Nota(titulo, descripcion);
+					addNota(nota);
+					
 				}
 
 				linea = bufferLectura.readLine();
@@ -140,10 +142,8 @@ public class Libreta {
 
 			for (int i = 0; i < numNotas; i++) {
 
-				Nota nota = notas[i];
-
-				bufferEscritura.write("TITULO=" + nota.getTitulo() + "\n");
-				bufferEscritura.write("DESCRIPCION=" + nota.getDescripcion() + "\n");
+				bufferEscritura.write("TITULO=" + notas[i].getTitulo() + "\n");
+				bufferEscritura.write("DESCRIPCION=" + notas[i].getDescripcion() + "\n");
 
 			}
 

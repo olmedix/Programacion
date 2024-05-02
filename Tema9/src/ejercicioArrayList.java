@@ -9,7 +9,8 @@ public class ejercicioArrayList {
 		List<String> actores = new ArrayList<String>(Arrays.asList(
 				"Lucy","Cooper Howard","Norm","Aufseher","Michael Emerson","Thaddeus","Betty Pearson",
 				"Chet","Dane","Woody Thomas","Dale Dickey","Huey","Monty","Rose MacLean","Davey","Adam",
-				"Mike Doyle","Aixa Kendrick","Rodrigo Luzzi","Snake Oil","Cassandra","Frederick")) ;
+				"Mike Doyle","Aixa Kendrick","Rodrigo Luzzi","Snake Oil","Cassandra","Frederick"
+				)) ;
 
 		//Agregar actpres en última posición y en la 3.
 		actores.add("Lloyd");

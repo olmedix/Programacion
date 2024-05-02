@@ -74,6 +74,13 @@ public class Libreta {
 		numNotas--;
 
 	}
+	
+	public boolean hayNota() {
+		if(numNotas < MAX_NOTAS) {
+			return true;
+		}
+		return false;
+	}
 
 	public void leerNotas() {
 

@@ -3,8 +3,8 @@ package ejerciciosRecursividad;
 public class Ejercicio03 {
 
 	public static void main(String[] args) {
-		
-		System.out.println(transforma(14));
+		System.out.println(aHex(15));
+		// System.out.println(transforma(14));
 
 	}
 
@@ -12,7 +12,7 @@ public class Ejercicio03 {
 
 		if (n > 1) {
 
-			return "" + aHex(n / 2) + n % 2;
+			return "" + aHex(transforma(n / 16))  + n % 16;
 
 		} else if (n == 1) {
 			return "1";

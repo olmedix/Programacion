@@ -1,6 +1,5 @@
 package ejemplosListas;
 
-import java.util.Objects;
 
 public class Mascota {
 
@@ -58,6 +57,5 @@ public class Mascota {
 		return false;
 	}
 
-	// Cambiar la clase Libreta para que usea ArrayList en vez de Array.
 
 }

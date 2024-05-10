@@ -18,7 +18,6 @@ public class Ejercicio04 {
 		 * Ahora el resultado, 2, es menor que el divisor, 6. Ya no podemos restar más.
 		 * El resultado de la división entera es el número de restas, 3.
 		 */
-		int numDivisones = 0;
 
 		System.out.println("se ha dividido " + calculoDivision(20, 6, 0) + " veces.");
 	}

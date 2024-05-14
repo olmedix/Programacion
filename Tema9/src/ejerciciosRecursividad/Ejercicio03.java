@@ -4,20 +4,20 @@ public class Ejercicio03 {
 
 	public static void main(String[] args) {
 		
-		System.out.println(transforma(687));
+		System.out.println(transforma(17));
 
 	}
 
 	private static String transforma(int n) {
 
-		if (n > 1) {
+		if (n > 15) {
 
-			return "" + transforma(n / 16) + aHex(n % 16) ;
+			return transforma(n / 16) + aHex(n % 16) ;
 
 		} else if (n == 1) {
 			return "1";
-		} else if (n == 1 || n == 0) {
-			return "" + n;
+		} else if (n>= 0 && n <= 15) {
+			return "" + aHex(n);
 
 		} else {
 			return "ERROR";

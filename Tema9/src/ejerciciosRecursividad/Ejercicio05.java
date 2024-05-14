@@ -8,7 +8,7 @@ public class Ejercicio05 {
 		// Escribe un método que calcule recursivamente la suma de todos los números
 		// enteros entre 1 y n.
 
-		System.out.println("El numero es " + sumaEnteros(3));
+		System.out.println("El numero es " + sumaEnteros(5));
 
 	}
 

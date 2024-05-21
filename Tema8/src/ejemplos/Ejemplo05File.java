@@ -22,7 +22,7 @@ public class Ejemplo05File {
 		// Crear una serie de carpetas, se añade una s en el metodo mkdir().
 		
 		File carpeta2 = new File("apuntes/prog/tema8");
-		resultado = carpeta2.mkdir();
+		resultado = carpeta2.mkdirs();
 		
 		if(resultado) {
 			System.out.println("Carpeta creada.");

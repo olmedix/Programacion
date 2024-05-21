@@ -8,9 +8,9 @@ public class Ejemplo06File {
 		
 		File archivoOriginal = new File("ficheros/contactos.txt");
 		
-		File archivoNuevo = new File("ficheros/contactosNuevo.txt");
+		//File archivoNuevo = new File("ficheros/contactosNuevo.txt");
 		
-		boolean resultado = archivoOriginal.renameTo(archivoNuevo);
+		boolean resultado = archivoOriginal.renameTo(new File("archivoNuevo"));
 		
 		if(resultado) {
 			System.out.println("Se ha renombrado el archivo");

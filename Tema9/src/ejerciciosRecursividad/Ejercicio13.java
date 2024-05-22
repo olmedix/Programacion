@@ -15,7 +15,6 @@ public class Ejercicio13 {
 		System.out.println("Escribe una palabra y te diré si es un palindromo:");
 		String frase = entrada.nextLine().trim();
 		String frase2 = "dabale arroz a la zorra el abad";
-		frase2.trim();
 		frase2 = quitaEspacios(frase2);
 		System.out.println(frase2);
 		int inicio = 0;

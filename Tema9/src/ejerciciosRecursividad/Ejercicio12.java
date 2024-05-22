@@ -19,10 +19,12 @@ public class Ejercicio12 {
 
 	private static boolean esPalindromo(char[] frase, int inicio, int fin) {
 
+		// Caso base.
 		if (inicio > fin) {
 			return true;
 		}
 
+		// Caso recursivo
 		if (frase[inicio] != frase[fin]) {
 
 			return false;

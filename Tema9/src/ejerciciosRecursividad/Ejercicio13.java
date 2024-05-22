@@ -15,7 +15,7 @@ public class Ejercicio13 {
 		System.out.println("Escribe una palabra y te diré si es un palindromo:");
 		String frase = entrada.nextLine().trim();
 		String frase2 = "dabale arroz a la zorra el abad";
-		// frase2.trim();
+		frase2.trim();
 		frase2 = quitaEspacios(frase2);
 		System.out.println(frase2);
 		int inicio = 0;
@@ -27,14 +27,14 @@ public class Ejercicio13 {
 
 	private static String quitaEspacios(String frase) {
 
-		String fraseDevuelta = "";
-		String[] nuevaFrase = frase.split(" ");
+		String[] palabras = frase.split(" ");
+		frase = "";
 
-		for (int i = 0; i < nuevaFrase.length; i++) {
-			fraseDevuelta = fraseDevuelta + nuevaFrase[i];
+		for (int i = 0; i < palabras.length; i++) {
+			frase = frase + palabras[i];
 		}
 
-		return fraseDevuelta;
+		return frase;
 	}
 
 	private static boolean esPalindromo(String frase, int inicio, int fin) {
@@ -44,7 +44,6 @@ public class Ejercicio13 {
 		}
 
 		if (frase.charAt(inicio) != frase.charAt(fin)) {
-			System.out.println("i= " + inicio + "\tf= " + fin);
 			return false;
 		}
 

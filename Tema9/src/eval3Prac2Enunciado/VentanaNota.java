@@ -27,7 +27,6 @@ public class VentanaNota extends JFrame {
 
 		setTitle("Evaluación");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -86,74 +85,32 @@ public class VentanaNota extends JFrame {
 	public void setCallback(Callback callback) {
 		this.callback = callback;
 	}
-	
+
 	/**
 	 * Método que verifica que la nota introducida por el usuario sea correcta.
 	 */
 	public void devolverNota() {
-		
+
 		String textoNota = txtNota.getText();
-		
+
 		try {
 			int nota = Integer.parseInt(textoNota);
-			
-			if(nota >= 0 && nota <=10 ) {
-				
+
+			if (nota >= 0 && nota <= 10) {
+
 				callback.actualizarVentana((int) nota);
 				dispose();
-			}else {
-				JOptionPane.showMessageDialog(this, "Debes introducir un número entre 0 y 10.", "Error", JOptionPane.ERROR_MESSAGE);
+			} else {
+				JOptionPane.showMessageDialog(this, "Debes introducir un número entre 0 y 10.", "Error",
+						JOptionPane.ERROR_MESSAGE);
 
 			}
-			
+
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(this, "Debes introducir un número entre 0 y 10.", "Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this, "Debes introducir un número entre 0 y 10.", "Error",
+					JOptionPane.ERROR_MESSAGE);
 		}
-		
-		
-		
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

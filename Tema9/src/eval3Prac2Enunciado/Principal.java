@@ -128,13 +128,17 @@ public class Principal extends JFrame {
 	}
 
 	/**
-	 * Método que introduce los alumnos en el programa.
-	 * Los alumnos tendrán nota= -1 por defecto.
+	 * Método que introduce los alumnos en el programa. Los alumnos tendrán nota= -1
+	 * por defecto.
 	 * 
 	 * @param rutaArchivo ruta del archivo de lectura.
 	 * @return el arrayList con todos los alumnos.
 	 */
 	public List<Alumno> importarAlumnos(String rutaArchivo) {
+
+		// Cada vez que pulse el botón "importar alumnos" se reiniciarán los alumnos y
+		// las notas y no abrá duplicidades.
+		alumnos.clear();
 
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(rutaArchivo));
@@ -184,20 +188,25 @@ public class Principal extends JFrame {
 	}
 
 	/**
-	 * Método que abre la ventana donde introduciremos las notas individualmente de cada alumno.
+	 * Método que abre la ventana donde introduciremos las notas individualmente de
+	 * cada alumno.
 	 * 
-	 * @param lstAlumnos para seleccionar el alumno al cual deseamos cambiar/introducir la nota.
+	 * @param lstAlumnos para seleccionar el alumno al cual deseamos
+	 *                   cambiar/introducir la nota.
 	 */
 	public void abrirFichaAlumno(JList<Alumno> lstAlumnos) {
-
-		VentanaNota ventana = new VentanaNota();
-		ventana.setLocationRelativeTo(this);
+		Alumno alumno = lstAlumnos.getSelectedValue();
 		
+		VentanaNota ventana = new VentanaNota();
+		
+		ventana.setAlumno(alumno);
+
+		ventana.setLocationRelativeTo(this);
+
 		ventana.setCallback(new Callback() {
 
 			@Override
 			public void actualizarVentana(int nota) {
-				Alumno alumno = lstAlumnos.getSelectedValue();
 
 				alumno.setNota(nota);
 			}
@@ -206,9 +215,9 @@ public class Principal extends JFrame {
 	}
 
 	/**
-	 * Método que guarda la asignatura, fecha del día y los alumnos con sus notas ya puestas.
-	 * Los alumnos sin nota asignada tendrán valor nota = -1.
-	 * Más detalles en {@link #importarAlumnos(String)}
+	 * Método que guarda la asignatura, fecha del día y los alumnos con sus notas ya
+	 * puestas. Los alumnos sin nota asignada tendrán el valor de -1. Más detalles
+	 * en {@link #importarAlumnos(String)}
 	 * 
 	 * @param rutaArchivo ruta del archivo en el cual guardaremos el fichero.
 	 */
@@ -239,11 +248,13 @@ public class Principal extends JFrame {
 			JOptionPane.showMessageDialog(this, "Se han guardado las notas de " + txtAsignatura.getText() + ".",
 					"Boletín App", JOptionPane.INFORMATION_MESSAGE);
 
-		}else if(asignatura.isEmpty()) {
-			JOptionPane.showMessageDialog(this, "Por favor, rellene la casilla de asignatura", "Asigntura vacía", JOptionPane.INFORMATION_MESSAGE);
-		}else {
-			JOptionPane.showMessageDialog(this, "Debe importar a los alumnos", "Alumnos no importados.", JOptionPane.INFORMATION_MESSAGE);
-			
+		} else if (asignatura.isEmpty()) {
+			JOptionPane.showMessageDialog(this, "Por favor, rellene la casilla de asignatura", "Asigntura vacía",
+					JOptionPane.INFORMATION_MESSAGE);
+		} else {
+			JOptionPane.showMessageDialog(this, "Debe importar a los alumnos", "Alumnos no importados.",
+					JOptionPane.INFORMATION_MESSAGE);
+
 		}
 
 	}

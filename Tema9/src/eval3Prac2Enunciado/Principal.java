@@ -199,6 +199,7 @@ public class Principal extends JFrame {
 		
 		VentanaNota ventana = new VentanaNota();
 		
+		// Añade el nombre en mayusculas a la segunda ventana.
 		ventana.setAlumno(alumno);
 
 		ventana.setLocationRelativeTo(this);

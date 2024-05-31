@@ -1,5 +1,7 @@
 package ejemplosMaps;
 
+import java.util.Objects;
+
 public class Propietario {
 	
 	private String dni;
@@ -34,6 +36,27 @@ public class Propietario {
 
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(apellidos, dni, nombre);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Propietario propietario = (Propietario) obj;
+		if(dni.equals(propietario.getDni()) && nombre.equals(propietario.getNombre()) && apellidos.equals(propietario.getApellidos()) ) {
+			return true;
+		}
+		
+		return false;
 	}
 	
 	

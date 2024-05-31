@@ -32,6 +32,36 @@ public class Ejemplo05 {
 			
 		}
 		
+		
+		// Este código va a fallar si no creamos los métodos hashCode() y equals en Propietario
+		// ( el tipo de valor en el mapa )
+		System.out.println("¿El propietario Agustín está en el mapa? " + mascotas.containsValue(new Propietario("78654957E", "Juan", "Ortíz")));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
